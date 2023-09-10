@@ -75,17 +75,17 @@
         (.setObject stmt idx (.createArrayOf conn elem-type (to-array v)))
         (.setObject stmt idx (clj->jsonb-pgobj v))))))
 
-(def default-users [{:id "user3"
+(def default-users [{:id 1
                      :first_name "Ella"
                      :last_name "Dickens"
                      :email "ella.dickens@mail.com"
                      :pass "pass3"}
-                    {:id "user4"
+                    {:id 2
                      :first_name "Mark"
                      :last_name "Thompson"
                      :email "mark.thompson@mail.com"
                      :pass "pass4"}
-                    {:id "user5"
+                    {:id 3
                      :first_name "Rob"
                      :last_name "Smith"
                      :email "rob.smith@mail.com"

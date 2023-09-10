@@ -1,10 +1,21 @@
 CREATE TABLE users
-(id VARCHAR(20) PRIMARY KEY,
- first_name VARCHAR(30),
- last_name VARCHAR(30),
- email VARCHAR(30),
- admin BOOLEAN,
- last_login TIMESTAMP,
- is_active BOOLEAN,
- pass VARCHAR(300));
+(
+    id BIGINT PRIMARY KEY,
+    first_name TEXT,
+    last_name TEXT,
+    email TEXT,
+    admin BOOLEAN,
+    last_login timestamptz,
+    is_active BOOLEAN,
+    pass TEXT
+);;
+
+CREATE TABLE error_logs (
+                           id BIGINT PRIMARY KEY,
+                           timestamp timestamptz,
+                           message TEXT
+);
+
+
+
 
