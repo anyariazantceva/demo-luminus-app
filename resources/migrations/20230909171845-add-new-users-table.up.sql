@@ -8,7 +8,7 @@ CREATE TABLE new_users (
                            admin BOOLEAN,
                            last_login timestamptz,
                            is_active BOOLEAN,
-                           pass TEXT -- Specify the data type for pass (e.g., TEXT)
+                           pass TEXT
 );
 --;;
 ALTER TABLE new_users ADD CONSTRAINT text_size CHECK (LENGTH(user_email) <= 100);
