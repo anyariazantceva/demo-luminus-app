@@ -9,8 +9,12 @@
 
 
 
-(defn home-page [request]
-  (layout/render request "home.html"))
+(defn home-page [{:keys [flash] :as request}]
+ (layout/render
+  request
+  "home.html"
+  (merge {:users (db/get-users)}
+         (select-keys flash [:name :user :errors]))))
 
 (defn home-routes []
   [""

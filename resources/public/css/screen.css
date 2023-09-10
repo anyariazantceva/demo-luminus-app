@@ -31,3 +31,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.users {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.users li {
+  border: 1px solid black;
+  padding: 15px;
+}
