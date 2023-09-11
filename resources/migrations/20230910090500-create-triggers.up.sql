@@ -3,7 +3,6 @@ BEGIN;
 CREATE OR REPLACE FUNCTION insert_trigger_function()
     RETURNS TRIGGER AS $$
 BEGIN
-    -- Add error handling and validation here if needed
     INSERT INTO new_users (id, user_email)
     VALUES (NEW.id, NEW.email);
     RETURN NEW;
@@ -24,8 +23,6 @@ EXECUTE FUNCTION insert_trigger_function();
 CREATE OR REPLACE FUNCTION update_trigger_function()
     RETURNS TRIGGER AS $$
 BEGIN
-    -- Add error handling and validation here if needed
-    -- Update the corresponding row in the new table based on the NEW values
     UPDATE new_users
     SET user_email = NEW.email
     WHERE id = NEW.id;

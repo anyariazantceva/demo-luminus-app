@@ -15,6 +15,7 @@ profiles.clj
 /.lsp/.cache/
 /.calva/output-window/
 /.shadow-cljs
+.idea
 /node_modules
 /log
 

@@ -7,8 +7,6 @@
    [ring.util.response]
    [ring.util.http-response :as response]))
 
-
-
 (defn home-page [{:keys [flash] :as request}]
  (layout/render
   request
